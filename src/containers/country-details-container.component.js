@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { getCountry } from '../actions/actions';
+import { getCountry } from '../actions/actions-countries';
 import CountryDetails from '../presentational/country-details.component';
 
 class CountryDetailsContainer extends React.Component {

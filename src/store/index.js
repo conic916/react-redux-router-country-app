@@ -3,7 +3,7 @@ import reducers from '../reducers/index';
 import DevTools from '../devTools';
 
 const store = createStore(
-  reducers,
+  reducers, 
   DevTools.instrument()
 );
 

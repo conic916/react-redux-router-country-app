@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { setContinent, deleteCountry } from '../actions/actions';
+import { setContinent, deleteCountry } from '../actions/actions-countries';
 import CountryFlagList from '../presentational/flag-list.component';
 
 class ContinentContainer extends React.Component {

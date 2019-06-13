@@ -1,19 +1,18 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
+import { render } from 'react-dom';
+import { Router, hashHistory } from 'react-router'; 
 import { Provider } from 'react-redux';
-import { Router, hashHistory } from 'react-router';
-import  routes from './routes';
-import store from './store/index';
+import store from './store';
 import DevTools from './devTools';
-import {getCountries} from './actions/actions.js';
+import { getCountries } from './actions/actions-countries';
+import routes from './routes';
 
-ReactDOM.render(
+render(
     <Provider store={store}>
-        <>
-            <Router history={hashHistory} routes={routes} />
-            <DevTools />
-        </>
-    </Provider>, 
+        <Router history={hashHistory} routes={routes} />
+        <DevTools />
+    </Provider>,
     document.getElementById('root')
 );
+
+store.dispatch(getCountries());
